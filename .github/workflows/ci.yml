@@ -14,5 +14,5 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
             - name: Build firmware
-              run: make build
+              run: make run
 
