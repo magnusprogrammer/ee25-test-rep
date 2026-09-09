@@ -23,3 +23,11 @@ run: build
 # Clean the build(Using the windows powershell command to remove the target file).
 clean:
 	@powershell -Command "Remove-Item -Path $(TARGET).exe -Force"
+
+# Analyze format.
+check-format:
+	@clang-format --dry-run --Werror $$(find . -name '*.cpp') $$(find . -name '*.h')
+
+# Format all .cpp and .h files in the repo.
+format:
+	@clang-format -i $$(find . -name '*.cpp') $$(find . -name '*.h')

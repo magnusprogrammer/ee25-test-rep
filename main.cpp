@@ -1,6 +1,7 @@
 #include <cstdio>
 
-int main() {
+int main()
+{
     printf("Hello, I'm your firmware!\n");
     return 0;
 }
